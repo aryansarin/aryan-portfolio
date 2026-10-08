@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aryan Sarin | Data Science & Statistics</title>
+<meta name="description" content="Aryan Sarin, final-year B.Sc. Data Science & Statistics student at CHRIST University. Quantitative modelling, risk analytics and forecasting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#070d1c;--navy:#0c1a3a;--line:#24365f;--paper:#f1efe8;--mute:#9aa8c7;--g:#e6b34a;--blue:#6ea0ff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font:17px/1.65 "Instrument Sans",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--g);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:fixed;inset:0 0 auto;z-index:5;background:rgba(7,13,28,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav b{font-family:Newsreader,serif;font-size:20px;font-weight:600}
+nav div{display:flex;gap:22px;font-size:15px;color:var(--mute)}
+nav a{text-decoration:none}nav a:hover{color:var(--paper)}
+#hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding:120px 0 64px}
+#sim{position:absolute;inset:0;width:100%;height:100%}
+#hero .wrap{position:relative;pointer-events:none}
+h1{font-family:Newsreader,serif;font-weight:400;font-size:clamp(56px,11vw,150px);line-height:.95;letter-spacing:-.03em}
+.sub{margin-top:24px;max-width:34em;font-size:clamp(18px,2.2vw,22px);color:#cfd8ee}
+.stats{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:32px;font-size:15px;color:var(--mute)}
+.stats b{color:var(--g);font-weight:600;font-size:22px;margin-right:6px;font-family:Newsreader,serif}
+.cta{display:flex;gap:12px;margin-top:32px;pointer-events:auto;flex-wrap:wrap}
+.btn{padding:12px 22px;border:1px solid var(--g);border-radius:4px;text-decoration:none;font-weight:600;font-size:15px}
+.btn.fill{background:var(--g);color:var(--ink)}
+.btn:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.note{position:absolute;right:24px;top:80px;font-size:13px;color:var(--mute);text-align:right;max-width:240px}
+section{padding:96px 0;border-top:1px solid var(--line)}
+h2{font-family:Newsreader,serif;font-weight:400;font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-.02em;margin-bottom:40px;max-width:16em}
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.two p+p{margin-top:16px}
+p{color:#cfd8ee;max-width:38em}
+figure img{width:100%;display:block;border-radius:6px;border:1px solid var(--line)}
+figcaption{font-size:14px;color:var(--mute);margin-top:10px}
+.proj{display:grid;grid-template-columns:200px 1fr;gap:16px 40px;padding:32px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj h3{font-family:Newsreader,serif;font-weight:600;font-size:26px;line-height:1.15}
+.tag{font-size:14px;color:var(--g);margin-top:8px}
+.proj ul{padding-left:18px;color:#cfd8ee}.proj li{margin-bottom:6px;max-width:42em}
+.proj.lead{background:var(--navy);padding:36px;border:1px solid var(--line);border-radius:8px;margin-bottom:12px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px}
+.skills h3{font-size:15px;color:var(--g);margin-bottom:10px;font-weight:600}
+.skills p{font-size:16px}
+.tl{display:grid;grid-template-columns:130px 1fr;gap:6px 32px;margin-bottom:32px}
+.tl time{color:var(--mute);font-size:15px}.tl b{font-weight:600}
+.tl p{grid-column:2}
+#contact h2{max-width:none}
+.links{display:flex;gap:14px;flex-wrap:wrap}
+footer{padding:32px 0;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+@media(max-width:760px){nav div a:not(:last-child){display:none}.two,.proj,.tl{grid-template-columns:1fr}.tl p{grid-column:1}.note{display:none}.proj.lead{padding:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Aryan Sarin</b><div><a href="#work">Work</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#record">Record</a><a href="#contact">Contact</a></div></div></nav>
+
+<header id="hero">
+  <canvas id="sim" aria-hidden="true"></canvas>
+  <div class="note" id="note"></div>
+  <div class="wrap">
+    <h1>Aryan<br>Sarin</h1>
+    <p class="sub">I build statistical models for risk and forecasting. Final-year Data Science &amp; Statistics student at CHRIST University, Bengaluru.</p>
+    <div class="stats"><span><b>3.92</b>GPA / 4.00</span><span><b>10,000</b>portfolios simulated</span><span><b>180K+</b>rows processed in PySpark</span></div>
+    <div class="cta"><a class="btn fill" href="#work">See my work</a><a class="btn" href="mailto:aryansarin17@gmail.com">Email me</a></div>
+  </div>
+</header>
+
+<section id="work"><div class="wrap">
+  <h2>Projects that put numbers on uncertainty</h2>
+
+  <div class="proj lead">
+    <div><h3>Monte Carlo Portfolio Optimization</h3><div class="tag">R, Shiny</div></div>
+    <ul>
+      <li>Interactive R Shiny app that optimizes portfolios from historical market data.</li>
+      <li>Simulates 10,000 portfolios to map risk-return trade-offs and picks winners by Sharpe Ratio and Value-at-Risk.</li>
+      <li>Statistical calculations, data processing and visualization in one deployed application.</li>
+      <li>Outputs validated through portfolio performance and risk analysis.</li>
+      <!-- TODO: add <li><a href="YOUR_SHINY_URL">Live app</a> · <a href="YOUR_GITHUB_URL">Code</a></li> -->
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div><h3>Data Engineering &amp; Supply-Chain Analytics</h3><div class="tag">PySpark</div></div>
+    <ul>
+      <li>Processed and analysed a 180K+ row supply-chain dataset: preparation, feature construction and clustering.</li>
+      <li>Surfaced customer and product patterns that could support inventory and product-level decisions.</li>
+    </ul>
+  </div>
+  <div class="proj">
+    <div><h3>Hospital Data ETL &amp; Analytics</h3><div class="tag">Power Query, Power BI</div></div>
+    <ul>
+      <li>End-to-end ETL workflow to clean, transform and model operational data.</li>
+      <li>Interactive Power BI dashboard for monitoring operations and supporting decisions.</li>
+    </ul>
+  </div>
+  <div class="proj">
+    <div><h3>Waste Image Classification</h3><div class="tag">Python, Machine Learning</div></div>
+    <ul>
+      <li>Classified recyclable vs non-recyclable waste across 1,011 images.</li>
+      <li>Extracted HOG, LBP and GLCM features; compared Logistic Regression, Decision Tree and Random Forest.</li>
+      <li>Best approach reached 65% accuracy, with structured testing to check reliability.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap two">
+  <div>
+    <h2>Statistics first, tools second</h2>
+    <p>I study Data Science &amp; Statistics at CHRIST (Deemed to be University), graduating May 2027 with a 3.92 / 4.00 GPA. I'm drawn to quantitative research, risk management and asset management, where a model's assumptions matter as much as its output.</p>
+    <p>I lead teams and speak in public as comfortably as I write code: I coordinated 50+ volunteers for the department's INFLECTRA event, and I regularly present at university events.</p>
+  </div>
+  <figure><img src="assets/speaking.jpg" alt="Aryan Sarin speaking at a podium on stage" loading="lazy"><figcaption>Speaking at a CHRIST University event</figcaption></figure>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>What I work with</h2>
+  <div class="skills">
+    <div><h3>Programming</h3><p>Python, R, SQL</p></div>
+    <div><h3>Analytics &amp; modelling</h3><p>Statistical modelling, regression, classification, machine learning, model evaluation, exploratory analysis</p></div>
+    <div><h3>Tools</h3><p>Power BI, Tableau, Excel, MySQL, PySpark, Git/GitHub, R Shiny</p></div>
+    <div><h3>Working style</h3><p>Analytical problem solving, clear communication, collaboration</p></div>
+  </div>
+</div></section>
+
+<section id="record"><div class="wrap two">
+  <figure><img src="assets/workshop.jpg" alt="Aryan Sarin receiving a certificate at the Applied Analytics with Salesforce Data Cloud workshop" loading="lazy"><figcaption>Receiving my certificate, Applied Analytics with Salesforce Data Cloud &amp; Tableau Next, Centre for AI, CHRIST</figcaption></figure>
+  <div>
+    <h2>Track record</h2>
+    <div class="tl"><time>May 2025</time><b>AI &amp; Prompt Engineering Intern, VaultofCodes</b><p>Designed and tested prompts for structured problem solving; improved workflow execution speed by at least 50%.</p></div>
+    <div class="tl"><time>Sep 2025</time><b>Top 50 Teams, A2HackFest 2025</b><p>AI hackathon hosted by QRaptorAI.</p></div>
+    <div class="tl"><time>Feb–Mar 2026</time><b>Student Coordinator, INFLECTRA 2025-26</b><p>Led 50+ volunteers across committees for the Statistics &amp; Data Science Association's flagship event.</p></div>
+    <div class="tl"><time>2025–26</time><b>Certifications</b><p>AWS Cloud Practitioner Essentials (Feb 2026) · Oracle Database Programming with SQL (Oct 2025) · Salesforce Data Cloud &amp; Tableau Next (Oct 2026)</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Let's talk</h2>
+  <p style="margin-bottom:28px">Open to internships and full-time roles in quantitative research, risk and asset management.</p>
+  <div class="links">
+    <a class="btn fill" href="mailto:aryansarin17@gmail.com">aryansarin17@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/aryansarin-datascientist" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- TODO: add GitHub link; add resume PDF at assets/resume.pdf and link it here -->
+  </div>
+</div></section>
+<footer><div class="wrap">Aryan Sarin · Bengaluru, India</div></footer>
+
+<script>
+// Hero: live Monte Carlo of geometric Brownian motion paths. Each refresh is a new simulation.
+(function(){
+  const c=document.getElementById('sim'),x=c.getContext('2d'),note=document.getElementById('note');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W,H,paths=[],N=140,T=160,t=0,dpr=Math.min(devicePixelRatio||1,2);
+  function gauss(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+  function build(){
+    W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+    const mu=.0006,sig=.02;paths=[];
+    for(let i=0;i<N;i++){let p=[1];for(let k=1;k<T;k++)p.push(p[k-1]*Math.exp(mu-.5*sig*sig+sig*gauss()));paths.push(p)}
+    const fin=paths.map(p=>p[T-1]).sort((a,b)=>a-b);
+    note.innerHTML='Live simulation: '+N+' paths<br>5th percentile outcome: '+((fin[Math.floor(N*.05)]-1)*100).toFixed(1)+'% (a Value-at-Risk style cut)';
+  }
+  function draw(){
+    x.clearRect(0,0,W,H);
+    const lo=.45,hi=2.6,top=H*.12,bot=H*.9,xr=W*.98;
+    const X=k=>k/(T-1)*xr,Y=v=>bot-(Math.log(v)-Math.log(lo))/(Math.log(hi)-Math.log(lo))*(bot-top);
+    const upto=reduce?T-1:Math.min(T-1,Math.floor(t));
+    x.lineWidth=1;
+    paths.forEach((p,i)=>{
+      const up=p[T-1]>=1;x.strokeStyle=up?'rgba(110,160,255,.22)':'rgba(230,179,74,.22)';
+      x.beginPath();for(let k=0;k<=upto;k++)k?x.lineTo(X(k),Y(p[k])):x.moveTo(X(0),Y(p[0]));x.stroke()});
+    x.strokeStyle='rgba(241,239,232,.25)';x.setLineDash([4,6]);x.beginPath();x.moveTo(0,Y(1));x.lineTo(W,Y(1));x.stroke();x.setLineDash([]);
+    if(!reduce&&t<T+30){t+=1.6;requestAnimationFrame(draw)}
+  }
+  function start(){t=0;build();draw()}
+  start();let rz;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(start,200)});
+})();
+</script>
+</body>
+</html>

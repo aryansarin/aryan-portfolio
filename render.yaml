@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: aryan-portfolio
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
